@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap");
+
+:root {
+  --green: #00e77f;
+  --white: #fff;
+  --light-white: #aaa;
+  --black: #3d3d3d;
+  --light-bg: #4b4b4b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Rubik", sans-serif;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.navbar .a_parent:hover{
+    color: var(--green);
+    background: var(--green);
+}
+
+.navbar {
+  width: 100%;
+  height: 60px;
+  background: var(--light-bg);
+}
+
+.navbar > ul {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar hr{
+    color: var(--green);
+    height: 3px;
+}
+
+.navbar ul li {
+  position: relative;
+}
+
+.navbar ul li a {
+  display: block;
+  color: #fff;
+  height: 60px;
+  width: 180px;
+  text-align: center;
+  font-size: medium;
+  padding: 20px 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.1s ease;
+}
+
+.navbar ul > li a {
+  margin-right: 1px;
+}
+
+.navbar ul > li:last-child a {
+  margin-right: 0;
+}
+
+.navbar ul li a .icon {
+  width: 25px;
+  display: inline-block;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.a_parent.active,
+.navbar .dd_menu ul li a:hover,
+.navbar .dd_menu ul li a.active {
+  background: var(--light-bg);
+}
+
+.navbar .dd_menu {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  display: none;
+  z-index:9999;
+}
+
+.navbar .dd_menu ul li a {
+  width: 180px;
+  background: var(--light-bg);
+  text-align: left;
+  padding: 20px;
+}
+
+.navbar .dd_menu ul li a:hover{
+    background:var(--green);
+    color:var(--black);
+}
+
+.navbar .dd_menu:before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  border: 15px solid;
+  border-color: transparent transparent var(--black) transparent;
+}
+
+.navbar ul li a.a_parent.active + .dd_menu {
+  display: block;
+}
+

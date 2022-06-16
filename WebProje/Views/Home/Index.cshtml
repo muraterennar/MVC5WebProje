@@ -1,0 +1,638 @@
+﻿@model List<WebProje.Models.Category>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<!-- home section starts  -->
+
+@foreach (var index in Model)
+{
+    <section class="home" id="home">
+        <div class="row">
+
+            <div class="content">
+                <h3>@index.Home.HomeFirsTitle <span>@index.Home.HomeLastTitle</span></h3>
+                <a href="#courses" class="btn">Kurs Seç</a>
+            </div>
+
+            <div class="image">
+                <img src="~/Content/Core/images/homg-img.svg" alt="">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- home section ends -->
+    <!-- couter section stars  -->
+
+    <section class="count">
+        <div class="box-container">
+
+            <div class="box">
+                <i class="fas fa-graduation-cap"></i>
+                <div class="content">
+                    <h3>150+</h3>
+                    <p>Kurslar</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-user-graduate"></i>
+                <div class="content">
+                    <h3>1300+</h3>
+                    <p>Öğrenciler</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-chalkboard-user"></i>
+                <div class="content">
+                    <h3>80+</h3>
+                    <p>öğretmenler</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- couter section ends -->
+    <!-- about section starts  -->
+
+    <section class="about" id="about">
+
+        <div class="row">
+
+            <div class="image">
+                <img src="~/Content/Core/images/about-img.svg" alt="">
+            </div>
+
+            <div class="content">
+                <h3>neden bizi seçmelisiniz?</h3>
+                <p>
+                    Kurumumuz, uygulanan yüksek kalite standartları sayesinde; 2011 Yılı Avrupa Birliği Kalite Ödülünü, 2010-2011-2012 Yılları,
+                    üç yıl üst üste, Tüketici Kalite Ödüllerini almaya hak kazanmış ilk ve tek dil okuludur. 2015 yılında ise dünyadaki en iyi eğitim
+                    kurumu ödülü olan 2015 World Quality Award ödülünü almıştır.
+                </p>
+                <a href="#contact" class="btn">iletişim kur</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- about section ends -->
+
+    <section class="courses" id="courses">
+
+        <h1 class="heading">Aktif <span>Kurslarımız</span></h1>
+
+        <div class="swiper course-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide slide">
+                    <img src="~/Content/Core/images/course-1.svg" alt="">
+                    <h3>Web Geliştirme</h3>
+                    <p>Sıfırdan ileri seviyeye 'Web Geliştirme': Html, Css, Bootstrap, Javascript, Asp.Net Core ve WebApi</p>
+                    <a href="#courses" class="btn">kursu seç</a>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <img src="~/Content/Core/images/course-2.svg" alt="">
+                    <h3>sosyal medya yönetimi</h3>
+                    <p>Burada tüm sosyal medya sitelerinde profesyonel hesap yönetmeyi ve reklam çalışmaları yürütmeyi öğreneceksin</p>
+                    <a href="#courses" class="btn">kursu seç</a>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <img src="~/Content/Core/images/course-3.svg" alt="">
+                    <h3>kimya ve biyoloji</h3>
+                    <p>özel ders tadında kimya ve biyoloji dersini slmsk idtersen biz burdayız ve seni beliyoruz</p>
+                    <a href="#courses" class="btn">kursu seç</a>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <img src="~/Content/Core/images/course-4.svg" alt="">
+                    <h3>grafik tasarım</h3>
+                    <p>Photoshop, illustrator ve indesign programlarını etkili ve kısa sürede öğrenerek tasarım yapmaya hazır mısın ?</p>
+                    <a href="#courses" class="btn">kursu seç</a>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <img src="~/Content/Core/images/course-5.svg" alt="">
+                    <h3>İngilizce</h3>
+                    <p>Platform üzerindeki ''En Sistemli'' İngilizce Kursu ile ''Özel ders alır gibi'' İngilizce öğrenin, anlayın ve konuşun!</p>
+                    <a href="#courses" class="btn">kursu seç</a>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <img src="~/Content/Core/images/course-6.svg" alt="">
+                    <h3>Backend Geliştirme</h3>
+                    <p>C# ile Nesne Yönelimli Programlama ve C# Veritabanı Otomasyon Yazılımları Geliştirmeyi C# Projesi Yaparak Öğrenin</p>
+                    <a href="#courses" class="btn">kursu seç</a>
+                </div>
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- courses section ends -->
+    <!-- teachers section starts  -->
+
+    <section class="teachers" id="teachers">
+        <h1 class="heading">Uzman <span>Öğretmenler</span></h1>
+        <div class="swiper teachers-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide slide">
+                    <img src="~/Content/Core/images/tutor-1.png" alt="">
+                    <div class="share">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-instagram"></a>
+                        <a href="#" class="fab fa-linkedin"></a>
+                    </div>
+                    <h3>john deo</h3>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <img src="~/Content/Core/images/tutor-2.png" alt="">
+                    <div class="share">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-instagram"></a>
+                        <a href="#" class="fab fa-linkedin"></a>
+                    </div>
+                    <h3>john deo</h3>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <img src="~/Content/Core/images/tutor-3.png" alt="">
+                    <div class="share">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-instagram"></a>
+                        <a href="#" class="fab fa-linkedin"></a>
+                    </div>
+                    <h3>john deo</h3>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <img src="~/Content/Core/images/tutor-4.png" alt="">
+                    <div class="share">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-instagram"></a>
+                        <a href="#" class="fab fa-linkedin"></a>
+                    </div>
+                    <h3>john deo</h3>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <img src="~/Content/Core/images/tutor-5.png" alt="">
+                    <div class="share">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-instagram"></a>
+                        <a href="#" class="fab fa-linkedin"></a>
+                    </div>
+                    <h3>john deo</h3>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <img src="~/Content/Core/images/tutor-6.png" alt="">
+                    <div class="share">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-instagram"></a>
+                        <a href="#" class="fab fa-linkedin"></a>
+                    </div>
+                    <h3>john deo</h3>
+                </div>
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- teachers section ends -->
+    <!-- reviews section starts  -->
+
+    <section class="reviews" id="reviews">
+        <h1 class="heading"> öğrenci <span>yorumları</span></h1>
+        <div class="swiper reviews-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide slide">
+                    <p>kurs çok kapsamlı, ayrıntılı ve sürekli güncelleniyor. bu işi yapmak isteyen herkes bu kursu almalı <br />  <br />    </p>
+                    <div class="user">
+                        <img src="~/Content/Core/images/pic-1.png" alt="">
+                        <div class="user-info">
+                            <h3>john deo</h3>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <p>Kurs güzel ve web geliştirme hakkında en iyi kurs bence. <br /><br /><br /></p>
+                    <div class="user">
+                        <img src="~/Content/Core/images/pic-2.png" alt="">
+                        <div class="user-info">
+                            <h3>john deo</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <p>Beni meslek sahibi yaptığınız için çok teşekkür ederim. Yaklaşık 1 buçuk senedir dersleri sindire sindire izledim devamında kendim uyguladım.  </p>
+                    <div class="user">
+                        <img src="~/Content/Core/images/pic-3.png" alt="">
+                        <div class="user-info">
+                            <h3>john deo</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <p>Ihtiyaciniz olan hersey var ve konular birbirleri ile baglantili sekilde oldugu icin herseyi parca parca baska birisinden ogrenmenize gerek kalmiyor.</p>
+                    <div class="user">
+                        <img src="~/Content/Core/images/pic-4.png" alt="">
+                        <div class="user-info">
+                            <h3>john deo</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <p>En kapsamli ve en güncel Fullstack Gelistirici Egitimlerinden birisi. Bir gelistiriciyi 0'dan zirveye tasiyan bir müfredat icerisinde barindiriyor.</p>
+                    <div class="user">
+                        <img src="~/Content/Core/images/pic-5.png" alt="">
+                        <div class="user-info">
+                            <h3>john deo</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <p>Merhabalar. Kesinlikle her bir kuruşuna değen bir kurs. Çok detaylı, akıcı ve öğretici bir eğitmen (Kendi nezdimde). Çok çok ileri düzey</p>
+                    <div class="user">
+                        <img src="~/Content/Core/images/pic-6.png" alt="">
+                        <div class="user-info">
+                            <h3>john deo</h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- reviews section ends -->
+    <!-- contact section starts  -->
+
+    <section class="contact" id="contact">
+        <h1 class="heading"><span>İletişim</span> kur</h1>
+        <div class="row">
+
+            <div class="image">
+                <img src="~/Content/Core/images/contact-img.svg" alt="">
+            </div>
+
+            <form action="" method="post">
+                <span>ad soyad</span>
+                <input type="text" required placeholder="ad soyad giriniz" maxlength="50" name="name" class="box">
+                <span>mail</span>
+                <input type="email" required placeholder="enter your valie number" max="9999999999" min="0" name="number" class="box">
+                <span>kurs seçiniz</span>
+                <select name="couses" class="box" required>
+                    <option value="" disabled selected>kurs seç --</option>
+                    <option value="web developement">Web Geliştirme</option>
+                    <option value="science and biology">Kimya ve Biyoloji</option>
+                    <option value="engineering">Backend Geliştirme</option>
+                    <option value="digital marketing">Sosyal Meyda Yönetimi</option>
+                    <option value="graphic design">Grafik Tasarım</option>
+                    <option value="teaching">İngilizce</option>
+                </select>
+                <input type="submit" value="mesaj gönder" class="btn" name="send">
+            </form>
+
+        </div>
+    </section>
+
+    <!-- contact section ends -->
+}
+
+<!--<section class="home" id="home">
+    <div class="row">
+
+        <div class="content">
+            <h3>Öğrenmeye <span>Başla</span></h3>
+            <a href="#courses" class="btn">Kurs Seç</a>
+        </div>
+
+        <div class="image">
+            <img src="~/Content/Core/images/homg-img.svg" alt="">
+        </div>
+
+    </div>
+</section>-->
+<!-- home section ends -->
+<!-- couter section stars  -->
+<!--<section class="count">
+    <div class="box-container">
+
+        <div class="box">
+            <i class="fas fa-graduation-cap"></i>
+            <div class="content">
+                <h3>150+</h3>
+                <p>Kurslar</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-user-graduate"></i>
+            <div class="content">
+                <h3>1300+</h3>
+                <p>Öğrenciler</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-chalkboard-user"></i>
+            <div class="content">
+                <h3>80+</h3>
+                <p>öğretmenler</p>
+            </div>
+        </div>
+    </div>
+</section>-->
+<!-- couter section ends -->
+<!-- about section starts  -->
+<!--<section class="about" id="about">
+
+    <div class="row">
+
+        <div class="image">
+            <img src="~/Content/Core/images/about-img.svg" alt="">
+        </div>
+
+        <div class="content">
+            <h3>neden bizi seçmelisiniz?</h3>
+            <p>
+                Kurumumuz, uygulanan yüksek kalite standartları sayesinde; 2011 Yılı Avrupa Birliği Kalite Ödülünü, 2010-2011-2012 Yılları,
+                üç yıl üst üste, Tüketici Kalite Ödüllerini almaya hak kazanmış ilk ve tek dil okuludur. 2015 yılında ise dünyadaki en iyi eğitim
+                kurumu ödülü olan 2015 World Quality Award ödülünü almıştır.
+            </p>
+            <a href="#contact" class="btn">iletişim kur</a>
+        </div>
+
+    </div>
+
+</section>-->
+<!-- about section ends -->
+<!--<section class="courses" id="courses">
+
+    <h1 class="heading">Aktif <span>Kurslarımız</span></h1>
+
+    <div class="swiper course-slider">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide slide">
+                <img src="~/Content/Core/images/course-1.svg" alt="">
+                <h3>Web Geliştirme</h3>
+                <p>Sıfırdan ileri seviyeye 'Web Geliştirme': Html, Css, Bootstrap, Javascript, Asp.Net Core ve WebApi</p>
+                <a href="#courses" class="btn">kursu seç</a>
+            </div>
+
+            <div class="swiper-slide slide">
+                <img src="~/Content/Core/images/course-2.svg" alt="">
+                <h3>sosyal medya yönetimi</h3>
+                <p>Burada tüm sosyal medya sitelerinde profesyonel hesap yönetmeyi ve reklam çalışmaları yürütmeyi öğreneceksin</p>
+                <a href="#courses" class="btn">kursu seç</a>
+            </div>
+
+            <div class="swiper-slide slide">
+                <img src="~/Content/Core/images/course-3.svg" alt="">
+                <h3>kimya ve biyoloji</h3>
+                <p>özel ders tadında kimya ve biyoloji dersini slmsk idtersen biz burdayız ve seni beliyoruz</p>
+                <a href="#courses" class="btn">kursu seç</a>
+            </div>
+
+            <div class="swiper-slide slide">
+                <img src="~/Content/Core/images/course-4.svg" alt="">
+                <h3>grafik tasarım</h3>
+                <p>Photoshop, illustrator ve indesign programlarını etkili ve kısa sürede öğrenerek tasarım yapmaya hazır mısın ?</p>
+                <a href="#courses" class="btn">kursu seç</a>
+            </div>
+
+            <div class="swiper-slide slide">
+                <img src="~/Content/Core/images/course-5.svg" alt="">
+                <h3>İngilizce</h3>
+                <p>Platform üzerindeki ''En Sistemli'' İngilizce Kursu ile ''Özel ders alır gibi'' İngilizce öğrenin, anlayın ve konuşun!</p>
+                <a href="#courses" class="btn">kursu seç</a>
+            </div>
+
+            <div class="swiper-slide slide">
+                <img src="~/Content/Core/images/course-6.svg" alt="">
+                <h3>Backend Geliştirme</h3>
+                <p>C# ile Nesne Yönelimli Programlama ve C# Veritabanı Otomasyon Yazılımları Geliştirmeyi C# Projesi Yaparak Öğrenin</p>
+                <a href="#courses" class="btn">kursu seç</a>
+            </div>
+
+        </div>
+
+        <div class="swiper-pagination"></div>
+    </div>
+</section>-->
+<!-- courses section ends -->
+<!-- teachers section starts  -->
+<!--<section class="teachers" id="teachers">
+    <h1 class="heading">Uzman <span>Öğretmenler</span></h1>
+    <div class="swiper teachers-slider">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide slide">
+                <img src="~/Content/Core/images/tutor-1.png" alt="">
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+                <h3>john deo</h3>
+            </div>
+
+            <div class="swiper-slide slide">
+                <img src="~/Content/Core/images/tutor-2.png" alt="">
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+                <h3>john deo</h3>
+            </div>
+
+            <div class="swiper-slide slide">
+                <img src="~/Content/Core/images/tutor-3.png" alt="">
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+                <h3>john deo</h3>
+            </div>
+
+            <div class="swiper-slide slide">
+                <img src="~/Content/Core/images/tutor-4.png" alt="">
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+                <h3>john deo</h3>
+            </div>
+
+            <div class="swiper-slide slide">
+                <img src="~/Content/Core/images/tutor-5.png" alt="">
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+                <h3>john deo</h3>
+            </div>
+
+            <div class="swiper-slide slide">
+                <img src="~/Content/Core/images/tutor-6.png" alt="">
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+                <h3>john deo</h3>
+            </div>
+
+        </div>
+
+        <div class="swiper-pagination"></div>
+    </div>
+</section>-->
+<!-- teachers section ends -->
+<!-- reviews section starts  -->
+<!--<section class="reviews" id="reviews">
+    <h1 class="heading"> öğrenci <span>yorumları</span></h1>
+    <div class="swiper reviews-slider">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide slide">
+                <p>kurs çok kapsamlı, ayrıntılı ve sürekli güncelleniyor. bu işi yapmak isteyen herkes bu kursu almalı <br />  <br />    </p>
+                <div class="user">
+                    <img src="~/Content/Core/images/pic-1.png" alt="">
+                    <div class="user-info">
+                        <h3>john deo</h3>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide">
+                <p>Kurs güzel ve web geliştirme hakkında en iyi kurs bence. <br /><br /><br /></p>
+                <div class="user">
+                    <img src="~/Content/Core/images/pic-2.png" alt="">
+                    <div class="user-info">
+                        <h3>john deo</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide">
+                <p>Beni meslek sahibi yaptığınız için çok teşekkür ederim. Yaklaşık 1 buçuk senedir dersleri sindire sindire izledim devamında kendim uyguladım.  </p>
+                <div class="user">
+                    <img src="~/Content/Core/images/pic-3.png" alt="">
+                    <div class="user-info">
+                        <h3>john deo</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide">
+                <p>Ihtiyaciniz olan hersey var ve konular birbirleri ile baglantili sekilde oldugu icin herseyi parca parca baska birisinden ogrenmenize gerek kalmiyor.</p>
+                <div class="user">
+                    <img src="~/Content/Core/images/pic-4.png" alt="">
+                    <div class="user-info">
+                        <h3>john deo</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide">
+                <p>En kapsamli ve en güncel Fullstack Gelistirici Egitimlerinden birisi. Bir gelistiriciyi 0'dan zirveye tasiyan bir müfredat icerisinde barindiriyor.</p>
+                <div class="user">
+                    <img src="~/Content/Core/images/pic-5.png" alt="">
+                    <div class="user-info">
+                        <h3>john deo</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide">
+                <p>Merhabalar. Kesinlikle her bir kuruşuna değen bir kurs. Çok detaylı, akıcı ve öğretici bir eğitmen (Kendi nezdimde). Çok çok ileri düzey</p>
+                <div class="user">
+                    <img src="~/Content/Core/images/pic-6.png" alt="">
+                    <div class="user-info">
+                        <h3>john deo</h3>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="swiper-pagination"></div>
+    </div>
+</section>-->
+<!-- reviews section ends -->
+<!-- contact section starts  -->
+<!--<section class="contact" id="contact">
+    <h1 class="heading"><span>İletişim</span> kur</h1>
+    <div class="row">
+
+        <div class="image">
+            <img src="~/Content/Core/images/contact-img.svg" alt="">
+        </div>
+
+        <form action="" method="post">
+            <span>ad soyad</span>
+            <input type="text" required placeholder="ad soyad giriniz" maxlength="50" name="name" class="box">
+            <span>mail</span>
+            <input type="email" required placeholder="enter your valie number" max="9999999999" min="0" name="number" class="box">
+            <span>kurs seçiniz</span>
+            <select name="couses" class="box" required>
+                <option value="" disabled selected>kurs seç --</option>
+                <option value="web developement">Web Geliştirme</option>
+                <option value="science and biology">Kimya ve Biyoloji</option>
+                <option value="engineering">Backend Geliştirme</option>
+                <option value="digital marketing">Sosyal Meyda Yönetimi</option>
+                <option value="graphic design">Grafik Tasarım</option>
+                <option value="teaching">İngilizce</option>
+            </select>
+            <input type="submit" value="mesaj gönder" class="btn" name="send">
+        </form>
+
+    </div>
+</section>-->
+<!-- contact section ends -->

@@ -1,0 +1,29 @@
+﻿@model List<WebProje.Models.WebVideoCourses>
+
+@{
+    ViewBag.Title = "WebDeveloper";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3 class="heading"><span>Web Kursu</span></h3>
+
+<div class="container">
+    <div class="main-video">
+        <div class="video">
+            <video src="~/Content/Core/Videos/ders-1.mp4" controls autoplay></video>
+            <h3 class="title">01. Video Kursu</h3>
+        </div>
+    </div>
+
+    <div class="video-list">
+
+        @foreach (var video in Model)
+        {
+            <div class="vid">
+                <video src="~/Content/Core/Videos/@video.VideoCoursePath"></video>
+                <h3 class="title">@video.VideoCourseLastTitle</h3>
+            </div>
+        }
+    </div>
+</div>
+

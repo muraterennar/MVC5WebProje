@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0716aec52517453a997cff74adaa9193" Name="Diagram1">
+        <EntityTypeShape EntityType="MuratErenNarDatabaseModel.About" Width="1.5" PointX="3.625" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MuratErenNarDatabaseModel.Category" Width="1.5" PointX="5.875" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MuratErenNarDatabaseModel.Comment" Width="1.5" PointX="0.5" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MuratErenNarDatabaseModel.Contact" Width="1.5" PointX="8.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MuratErenNarDatabaseModel.Course" Width="1.5" PointX="11.25" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="MuratErenNarDatabaseModel.Home" Width="1.5" PointX="2.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MuratErenNarDatabaseModel.Teacher" Width="1.5" PointX="8" PointY="6.625" IsExpanded="true" />
+        <AssociationConnector Association="MuratErenNarDatabaseModel.FK_Category_About" ManuallyRouted="false" />
+        <AssociationConnector Association="MuratErenNarDatabaseModel.FK_Category_Comment" ManuallyRouted="false" />
+        <AssociationConnector Association="MuratErenNarDatabaseModel.FK_Category_Contect" ManuallyRouted="false" />
+        <AssociationConnector Association="MuratErenNarDatabaseModel.FK_Category_Course" ManuallyRouted="false" />
+        <AssociationConnector Association="MuratErenNarDatabaseModel.FK_Category_Home" ManuallyRouted="false" />
+        <AssociationConnector Association="MuratErenNarDatabaseModel.FK_Category_Teacher" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="MuratErenNarDatabaseModel.WebVideoCourses" Width="1.5" PointX="0.875" PointY="9.625" />
+        <EntityTypeShape EntityType="MuratErenNarDatabaseModel.BackendVideoCourse" Width="1.5" PointX="2.75" PointY="9.625" />
+        <EntityTypeShape EntityType="MuratErenNarDatabaseModel.SMManagement" Width="1.5" PointX="4.625" PointY="9.625" />
+        <EntityTypeShape EntityType="MuratErenNarDatabaseModel.ChemistryAndBiology" Width="1.5" PointX="6.375" PointY="9.625" />
+        <EntityTypeShape EntityType="MuratErenNarDatabaseModel.GraphicDesingCourse" Width="1.5" PointX="8.25" PointY="9.625" />
+        <EntityTypeShape EntityType="MuratErenNarDatabaseModel.EnglishCourse" Width="1.5" PointX="10.125" PointY="9.625" />
+        <EntityTypeShape EntityType="MuratErenNarDatabaseModel.Users" Width="1.5" PointX="11.5" PointY="6.875" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

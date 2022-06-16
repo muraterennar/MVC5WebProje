@@ -1,0 +1,29 @@
+﻿@model WebProje.Models.About
+@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+
+    <div class="row">
+
+        <div class="image">
+            <img src="~/Content/Core/images/@Model.AboutImage" alt="">
+        </div>
+
+        <div class="content">
+            <h3>@Model.AboutTitle</h3>
+            <p>
+                @Model.AboutText
+            </p>
+            <a href="Contact" class="btn">@Model.AboutButtonTitle</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- about section ends -->

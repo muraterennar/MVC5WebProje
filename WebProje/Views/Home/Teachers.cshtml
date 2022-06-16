@@ -1,0 +1,28 @@
+﻿@model List<WebProje.Models.Teacher>
+@{
+    ViewBag.Title = "Teachers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- teachers section starts  -->
+
+<section id="teachers">
+
+    <h1 class="teachersHeading">Uzman  <span>Öğretmenler</span></h1>
+
+    <div class="teachers col-md-12">
+        @foreach (var item in Model)
+        {
+            <div class="teacher">
+                <img class="teacherImg" src="~/Content/Core/images/@item.TeacherImage" />
+                <hr class="hr" />
+                <h3 class="teacherTitle">@item.TeacherFullName</h3>
+                <p class="teacherText"><b class="teacherTitle">Uzmanlık Alanı:</b> @item.TeacherProfession</p>
+            </div>
+        }
+
+    </div>
+
+</section>
+
+<!-- teachers section ends -->

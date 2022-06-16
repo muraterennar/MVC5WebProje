@@ -1,0 +1,143 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+
+:root {
+    --green: #00E77F;
+    --white: #fff;
+    --light-white: #aaa;
+    --black: #3d3d3d;
+    --light-bg: #4b4b4b;
+}
+
+* {
+    font-family: 'Rubik', sans-serif;
+}
+
+.teachers {
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    text-align: center;
+    transition:all .2ms ease;
+}
+
+.teacher {
+    border-radius: 20px;
+    background: var(--light-bg);
+    padding: 10px;
+    text-align: center;
+    margin: 45px;
+    width: 20%;
+    height: 20%;
+    box-sizing: border-box;
+    display:inline-block;
+    opacity:0.2;
+    cursor:pointer;
+}
+
+.teacher:hover{
+    opacity:0.2;
+    background:var(--green);
+}
+
+.teachersHeading {
+    margin-bottom: 2.5rem;
+    text-align: center;
+    font-size: 4rem;
+    color: var(--white);
+    text-transform: uppercase;
+    padding: 50px;
+}
+
+    .teachersHeading span {
+        color: var(--green);
+        text-transform: uppercase;
+    }
+
+.teacherImg {
+    height: 300px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: .5rem;
+    border-radius:20px;
+    margin-bottom:20px;
+}
+
+.teacherImg:hover{
+    opacity:0.5;
+}
+
+.teacherTitle {
+    font-weight: 700;
+    font-size: large;
+    color: var(--green);
+    margin-bottom: 10px;
+}
+
+.teacherText {
+    font-weight: 400;
+    font-size: medium;
+    color: var(--white);
+    text-align: center;
+}
+
+.teacherButton {
+    color: var(--black);
+    border-radius: 50px;
+    border: solid 1px var(--black);
+    background: var( --light-white);
+    margin-top: 50px;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+
+    .teacherButton:hover {
+        color: var(--green);
+    }
+
+
+@media (max-width:991px) {
+
+    html {
+        font-size: 55%;
+    }
+
+    body{
+        padding:20px;
+    }
+
+    .courses {
+        padding: 20px;
+        margin: 0;
+    }
+}
+
+@media (max-width:791px) {
+
+    html {
+        font-size: 55%;
+    }
+
+    body{
+        padding:20px;
+    }
+
+    .courses {
+        padding: 20px;
+    }
+}
+
+@media (max-width:491px) {
+
+    html {
+        font-size: 55%;
+    }
+
+    body{
+        padding:20px;
+    }
+
+    .courses {
+        padding: 20px;
+        margin: 0;
+    }
+}

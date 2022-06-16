@@ -1,0 +1,29 @@
+﻿@model List<WebProje.Models.Course>
+@{
+    ViewBag.Title = "Courses";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- courses section starts  -->
+
+<section id="courses">
+
+    <h1 class="coursesHeading">Aktif <span>Kurslar</span></h1>
+
+    <div class="courses col-md-12">
+        @foreach (var item in Model)
+        {
+            <div class="course">
+                <img class="courseImg" src="~/Content/Core/images/@item.CourseImage" />
+                <hr class="hr" />
+                <h3 class="courseTitle">@item.CourseName</h3>
+                <p class="courseText">@item.CourseText</p>
+                <a href="@item.CourseLink" class="courseButton btn">@item.CourseButtonTitle</a>
+            </div>
+        }
+
+    </div>
+
+</section>
+
+<!-- courses section ends -->

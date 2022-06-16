@@ -1,0 +1,62 @@
+﻿@model WebProje.Models.Home
+@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="row">
+
+        <div class="content">
+            <h3>@Model.HomeFirsTitle <span>@Model.HomeLastTitle</span></h3>
+            <a href="Home/Courses" class="btn">@Model.HomeButtonTitle</a>
+
+        </div>
+
+        <div class="image">
+            <img src="~/Content/Core/images/@Model.HomeImage" alt="">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- home section ends -->
+<!-- couter section stars  -->
+
+<section class="count">
+
+    <div class="box-container">
+
+        <div class="box">
+            <i class="@Model.HomeCourseImg"></i>
+            <div class="content">
+                <h3>@Model.HomeNumberOfCourses</h3>
+                <p>Kurslar</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <i class="@Model.HomeStundentImg"></i>
+            <div class="content">
+                <h3>@Model.HomeNumberOfStudents</h3>
+                <p>Öğrenciler</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <i class="@Model.HomeTeacherImg"></i>
+            <div class="content">
+                <h3>@Model.HomeNumberOfTeachers</h3>
+                <p>öğretmenler</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- couter section ends -->

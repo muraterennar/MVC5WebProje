@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- contact section starts  -->
+
+<section class="contact" id="contact">
+
+    <h1 class="heading">İletişim <span>kur</span></h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img src="~/Content/Core/images/contact-img.svg" alt="">
+        </div>
+
+        <form action="" method="post">
+            <span>ad soyad</span>
+            <input type="text" required placeholder="ad soyad giriniz" maxlength="50" name="name" class="box">
+            <span>mail</span>
+            <input type="email" required placeholder="enter your valie number" max="9999999999" min="0" name="number" class="box">
+            <span>kurs seçiniz</span>
+            <select name="couses" class="box" required>
+                <option value="" disabled selected>kurs seç --</option>
+                <option value="web developement">Web Geliştirme</option>
+                <option value="science and biology">Kimya ve Biyoloji</option>
+                <option value="engineering">Backend Geliştirme</option>
+                <option value="digital marketing">Sosyal Meyda Yönetimi</option>
+                <option value="graphic design">Grafik Tasarım</option>
+                <option value="teaching">İngilizce</option>
+            </select>
+            <input type="submit" value="mesaj gönder" class="btn" name="send">
+        </form>
+
+    </div>
+
+</section>
+
+<!-- contact section ends -->

@@ -1,0 +1,753 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="MuratErenNarDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="About">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AboutCategoryName" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="AboutTitle" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="AboutImage" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="AboutText" Type="varchar" MaxLength="1000" Nullable="false" />
+          <Property Name="AboutButtonTitle" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BackendVideoCourse">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CourseTitle" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="CoursePath" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HomeId" Type="int" Nullable="false" />
+          <Property Name="AboutId" Type="int" Nullable="false" />
+          <Property Name="CourseId" Type="int" Nullable="false" />
+          <Property Name="TeacherId" Type="int" Nullable="false" />
+          <Property Name="ReviewId" Type="int" Nullable="false" />
+          <Property Name="ContactId" Type="int" Nullable="false" />
+          <Property Name="NavTitle" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="FooterText" Type="varchar" MaxLength="200" />
+          <Property Name="FooterLinkOne" Type="varchar" MaxLength="300" />
+          <Property Name="FooterLinkTwo" Type="varchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="ChemistryAndBiology">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CourseTitle" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="CoursePath" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Comment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CommentCategoryName" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="CommentrFirstTitle" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CommentLastTitle" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CommentImage" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="CommenterFullName" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="CommentText" Type="varchar" MaxLength="1000" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Contact">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ContectCategoryName" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="ContectFirstTitle" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ContectLastTitle" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ContectImage" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="ContectFullName" Type="varchar" MaxLength="200" />
+          <Property Name="ContectMail" Type="varchar" MaxLength="200" />
+          <Property Name="ContectCourse" Type="varchar" MaxLength="200" />
+          <Property Name="ContectButtonTitle" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Course">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CourseCategoryName" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="CourseFirstTitle" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CourseLastTitle" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CourseImage" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="CourseText" Type="varchar" MaxLength="1000" Nullable="false" />
+          <Property Name="CourseButtonTitle" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="CourseName" Type="varchar" MaxLength="100" />
+          <Property Name="CourseLink" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="EnglishCourse">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CourseTitle" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="CoursePath" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GraphicDesingCourse">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CourseTitle" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="CoursePath" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Home">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HomeCategoryName" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="HomeImage" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="HomeFirsTitle" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="HomeLastTitle" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="HomeButtonTitle" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="HomeStundentImg" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="HomeNumberOfStudents" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="HomeCourseImg" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="HomeNumberOfCourses" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="HomeTeacherImg" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="HomeNumberOfTeachers" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SMManagement">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CourseTitle" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="CoursePath" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Teacher">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TeacherCategoryName" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="TeacherFirstTitle" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="TeacherLastTitle" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="TeacherImage" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="TeacherFullName" Type="varchar" MaxLength="1000" Nullable="false" />
+          <Property Name="TeacherProfession" Type="varchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Role" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WebVideoCourses">
+          <Key>
+            <PropertyRef Name="VideoCourseId" />
+          </Key>
+          <Property Name="VideoCourseId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="VideoCourseFirstTitle" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="VideoCourseLastTitle" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="VideoCoursePath" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Category_About">
+          <End Role="About" Type="Self.About" Multiplicity="1" />
+          <End Role="Category" Type="Self.Category" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="About">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Category">
+              <PropertyRef Name="AboutId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Category_Comment">
+          <End Role="Comment" Type="Self.Comment" Multiplicity="1" />
+          <End Role="Category" Type="Self.Category" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Comment">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Category">
+              <PropertyRef Name="ReviewId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Category_Contect">
+          <End Role="Contact" Type="Self.Contact" Multiplicity="1" />
+          <End Role="Category" Type="Self.Category" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contact">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Category">
+              <PropertyRef Name="ContactId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Category_Course">
+          <End Role="Course" Type="Self.Course" Multiplicity="1" />
+          <End Role="Category" Type="Self.Category" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Course">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Category">
+              <PropertyRef Name="CourseId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Category_Home">
+          <End Role="Home" Type="Self.Home" Multiplicity="1" />
+          <End Role="Category" Type="Self.Category" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Home">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Category">
+              <PropertyRef Name="HomeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Category_Teacher">
+          <End Role="Teacher" Type="Self.Teacher" Multiplicity="1" />
+          <End Role="Category" Type="Self.Category" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teacher">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Category">
+              <PropertyRef Name="TeacherId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MuratErenNarDatabaseModelStoreContainer">
+          <EntitySet Name="About" EntityType="Self.About" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BackendVideoCourse" EntityType="Self.BackendVideoCourse" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ChemistryAndBiology" EntityType="Self.ChemistryAndBiology" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Comment" EntityType="Self.Comment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Contact" EntityType="Self.Contact" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Course" EntityType="Self.Course" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EnglishCourse" EntityType="Self.EnglishCourse" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GraphicDesingCourse" EntityType="Self.GraphicDesingCourse" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Home" EntityType="Self.Home" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SMManagement" EntityType="Self.SMManagement" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Teacher" EntityType="Self.Teacher" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WebVideoCourses" EntityType="Self.WebVideoCourses" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Category_About" Association="Self.FK_Category_About">
+            <End Role="About" EntitySet="About" />
+            <End Role="Category" EntitySet="Category" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Category_Comment" Association="Self.FK_Category_Comment">
+            <End Role="Comment" EntitySet="Comment" />
+            <End Role="Category" EntitySet="Category" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Category_Contect" Association="Self.FK_Category_Contect">
+            <End Role="Contact" EntitySet="Contact" />
+            <End Role="Category" EntitySet="Category" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Category_Course" Association="Self.FK_Category_Course">
+            <End Role="Course" EntitySet="Course" />
+            <End Role="Category" EntitySet="Category" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Category_Home" Association="Self.FK_Category_Home">
+            <End Role="Home" EntitySet="Home" />
+            <End Role="Category" EntitySet="Category" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Category_Teacher" Association="Self.FK_Category_Teacher">
+            <End Role="Teacher" EntitySet="Teacher" />
+            <End Role="Category" EntitySet="Category" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MuratErenNarDatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="About">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AboutCategoryName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AboutTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AboutImage" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AboutText" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AboutButtonTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Category" Relationship="Self.FK_Category_About" FromRole="About" ToRole="Category" />
+        </EntityType>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HomeId" Type="Int32" Nullable="false" />
+          <Property Name="AboutId" Type="Int32" Nullable="false" />
+          <Property Name="CourseId" Type="Int32" Nullable="false" />
+          <Property Name="TeacherId" Type="Int32" Nullable="false" />
+          <Property Name="ReviewId" Type="Int32" Nullable="false" />
+          <Property Name="ContactId" Type="Int32" Nullable="false" />
+          <Property Name="NavTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FooterText" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="FooterLinkOne" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="FooterLinkTwo" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="About" Relationship="Self.FK_Category_About" FromRole="Category" ToRole="About" />
+          <NavigationProperty Name="Comment" Relationship="Self.FK_Category_Comment" FromRole="Category" ToRole="Comment" />
+          <NavigationProperty Name="Contact" Relationship="Self.FK_Category_Contect" FromRole="Category" ToRole="Contact" />
+          <NavigationProperty Name="Course" Relationship="Self.FK_Category_Course" FromRole="Category" ToRole="Course" />
+          <NavigationProperty Name="Home" Relationship="Self.FK_Category_Home" FromRole="Category" ToRole="Home" />
+          <NavigationProperty Name="Teacher" Relationship="Self.FK_Category_Teacher" FromRole="Category" ToRole="Teacher" />
+        </EntityType>
+        <EntityType Name="Comment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CommentCategoryName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CommentrFirstTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CommentLastTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CommentImage" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CommenterFullName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CommentText" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Category" Relationship="Self.FK_Category_Comment" FromRole="Comment" ToRole="Category" />
+        </EntityType>
+        <EntityType Name="Contact">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ContectCategoryName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ContectFirstTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ContectLastTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ContectImage" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ContectFullName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="ContectMail" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="ContectCourse" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="ContectButtonTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Category" Relationship="Self.FK_Category_Contect" FromRole="Contact" ToRole="Category" />
+        </EntityType>
+        <EntityType Name="Course">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CourseCategoryName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CourseFirstTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CourseLastTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CourseImage" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CourseText" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CourseButtonTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CourseName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Category" Relationship="Self.FK_Category_Course" FromRole="Course" ToRole="Category" />
+          <Property Name="CourseLink" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Home">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HomeCategoryName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HomeImage" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HomeFirsTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HomeLastTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HomeButtonTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HomeStundentImg" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HomeNumberOfStudents" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HomeCourseImg" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HomeNumberOfCourses" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HomeTeacherImg" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HomeNumberOfTeachers" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Category" Relationship="Self.FK_Category_Home" FromRole="Home" ToRole="Category" />
+        </EntityType>
+        <EntityType Name="Teacher">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TeacherCategoryName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TeacherFirstTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TeacherLastTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TeacherImage" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TeacherFullName" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Category" Relationship="Self.FK_Category_Teacher" FromRole="Teacher" ToRole="Category" />
+          <Property Name="TeacherProfession" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK_Category_About">
+          <End Role="About" Type="Self.About" Multiplicity="1" />
+          <End Role="Category" Type="Self.Category" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="About">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Category">
+              <PropertyRef Name="AboutId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Category_Comment">
+          <End Role="Comment" Type="Self.Comment" Multiplicity="1" />
+          <End Role="Category" Type="Self.Category" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Comment">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Category">
+              <PropertyRef Name="ReviewId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Category_Contect">
+          <End Role="Contact" Type="Self.Contact" Multiplicity="1" />
+          <End Role="Category" Type="Self.Category" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contact">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Category">
+              <PropertyRef Name="ContactId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Category_Course">
+          <End Role="Course" Type="Self.Course" Multiplicity="1" />
+          <End Role="Category" Type="Self.Category" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Course">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Category">
+              <PropertyRef Name="CourseId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Category_Home">
+          <End Role="Home" Type="Self.Home" Multiplicity="1" />
+          <End Role="Category" Type="Self.Category" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Home">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Category">
+              <PropertyRef Name="HomeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Category_Teacher">
+          <End Role="Teacher" Type="Self.Teacher" Multiplicity="1" />
+          <End Role="Category" Type="Self.Category" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teacher">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Category">
+              <PropertyRef Name="TeacherId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MuratErenNarDatabaseEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="About" EntityType="Self.About" />
+          <EntitySet Name="Category" EntityType="Self.Category" />
+          <EntitySet Name="Comment" EntityType="Self.Comment" />
+          <EntitySet Name="Contact" EntityType="Self.Contact" />
+          <EntitySet Name="Course" EntityType="Self.Course" />
+          <EntitySet Name="Home" EntityType="Self.Home" />
+          <EntitySet Name="Teacher" EntityType="Self.Teacher" />
+          <AssociationSet Name="FK_Category_About" Association="Self.FK_Category_About">
+            <End Role="About" EntitySet="About" />
+            <End Role="Category" EntitySet="Category" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Category_Comment" Association="Self.FK_Category_Comment">
+            <End Role="Comment" EntitySet="Comment" />
+            <End Role="Category" EntitySet="Category" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Category_Contect" Association="Self.FK_Category_Contect">
+            <End Role="Contact" EntitySet="Contact" />
+            <End Role="Category" EntitySet="Category" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Category_Course" Association="Self.FK_Category_Course">
+            <End Role="Course" EntitySet="Course" />
+            <End Role="Category" EntitySet="Category" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Category_Home" Association="Self.FK_Category_Home">
+            <End Role="Home" EntitySet="Home" />
+            <End Role="Category" EntitySet="Category" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Category_Teacher" Association="Self.FK_Category_Teacher">
+            <End Role="Teacher" EntitySet="Teacher" />
+            <End Role="Category" EntitySet="Category" />
+          </AssociationSet>
+          <EntitySet Name="WebVideoCourses" EntityType="MuratErenNarDatabaseModel.WebVideoCourses" />
+          <EntitySet Name="BackendVideoCourse" EntityType="MuratErenNarDatabaseModel.BackendVideoCourse" />
+          <EntitySet Name="SMManagement" EntityType="MuratErenNarDatabaseModel.SMManagement" />
+          <EntitySet Name="ChemistryAndBiology" EntityType="MuratErenNarDatabaseModel.ChemistryAndBiology" />
+          <EntitySet Name="GraphicDesingCourse" EntityType="MuratErenNarDatabaseModel.GraphicDesingCourse" />
+          <EntitySet Name="EnglishCourse" EntityType="MuratErenNarDatabaseModel.EnglishCourse" />
+          <EntitySet Name="Users" EntityType="MuratErenNarDatabaseModel.Users" />
+        </EntityContainer>
+        <EntityType Name="WebVideoCourses">
+          <Key>
+            <PropertyRef Name="VideoCourseId" />
+          </Key>
+          <Property Name="VideoCourseId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VideoCourseFirstTitle" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="VideoCourseLastTitle" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="VideoCoursePath" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="BackendVideoCourse">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CourseTitle" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CoursePath" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SMManagement">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CourseTitle" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CoursePath" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="ChemistryAndBiology">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CourseTitle" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CoursePath" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="GraphicDesingCourse">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CourseTitle" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CoursePath" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="EnglishCourse">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CourseTitle" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CoursePath" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Role" Type="Boolean" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MuratErenNarDatabaseModelStoreContainer" CdmEntityContainer="MuratErenNarDatabaseEntities">
+          <EntitySetMapping Name="About">
+            <EntityTypeMapping TypeName="MuratErenNarDatabaseModel.About">
+              <MappingFragment StoreEntitySet="About">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="AboutCategoryName" ColumnName="AboutCategoryName" />
+                <ScalarProperty Name="AboutTitle" ColumnName="AboutTitle" />
+                <ScalarProperty Name="AboutImage" ColumnName="AboutImage" />
+                <ScalarProperty Name="AboutText" ColumnName="AboutText" />
+                <ScalarProperty Name="AboutButtonTitle" ColumnName="AboutButtonTitle" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Category">
+            <EntityTypeMapping TypeName="MuratErenNarDatabaseModel.Category">
+              <MappingFragment StoreEntitySet="Category">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="HomeId" ColumnName="HomeId" />
+                <ScalarProperty Name="AboutId" ColumnName="AboutId" />
+                <ScalarProperty Name="CourseId" ColumnName="CourseId" />
+                <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+                <ScalarProperty Name="ReviewId" ColumnName="ReviewId" />
+                <ScalarProperty Name="ContactId" ColumnName="ContactId" />
+                <ScalarProperty Name="NavTitle" ColumnName="NavTitle" />
+                <ScalarProperty Name="FooterText" ColumnName="FooterText" />
+                <ScalarProperty Name="FooterLinkOne" ColumnName="FooterLinkOne" />
+                <ScalarProperty Name="FooterLinkTwo" ColumnName="FooterLinkTwo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Comment">
+            <EntityTypeMapping TypeName="MuratErenNarDatabaseModel.Comment">
+              <MappingFragment StoreEntitySet="Comment">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CommentCategoryName" ColumnName="CommentCategoryName" />
+                <ScalarProperty Name="CommentrFirstTitle" ColumnName="CommentrFirstTitle" />
+                <ScalarProperty Name="CommentLastTitle" ColumnName="CommentLastTitle" />
+                <ScalarProperty Name="CommentImage" ColumnName="CommentImage" />
+                <ScalarProperty Name="CommenterFullName" ColumnName="CommenterFullName" />
+                <ScalarProperty Name="CommentText" ColumnName="CommentText" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contact">
+            <EntityTypeMapping TypeName="MuratErenNarDatabaseModel.Contact">
+              <MappingFragment StoreEntitySet="Contact">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ContectCategoryName" ColumnName="ContectCategoryName" />
+                <ScalarProperty Name="ContectFirstTitle" ColumnName="ContectFirstTitle" />
+                <ScalarProperty Name="ContectLastTitle" ColumnName="ContectLastTitle" />
+                <ScalarProperty Name="ContectImage" ColumnName="ContectImage" />
+                <ScalarProperty Name="ContectFullName" ColumnName="ContectFullName" />
+                <ScalarProperty Name="ContectMail" ColumnName="ContectMail" />
+                <ScalarProperty Name="ContectCourse" ColumnName="ContectCourse" />
+                <ScalarProperty Name="ContectButtonTitle" ColumnName="ContectButtonTitle" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Course">
+            <EntityTypeMapping TypeName="MuratErenNarDatabaseModel.Course">
+              <MappingFragment StoreEntitySet="Course">
+                <ScalarProperty Name="CourseLink" ColumnName="CourseLink" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CourseCategoryName" ColumnName="CourseCategoryName" />
+                <ScalarProperty Name="CourseFirstTitle" ColumnName="CourseFirstTitle" />
+                <ScalarProperty Name="CourseLastTitle" ColumnName="CourseLastTitle" />
+                <ScalarProperty Name="CourseImage" ColumnName="CourseImage" />
+                <ScalarProperty Name="CourseText" ColumnName="CourseText" />
+                <ScalarProperty Name="CourseButtonTitle" ColumnName="CourseButtonTitle" />
+                <ScalarProperty Name="CourseName" ColumnName="CourseName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Home">
+            <EntityTypeMapping TypeName="MuratErenNarDatabaseModel.Home">
+              <MappingFragment StoreEntitySet="Home">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="HomeCategoryName" ColumnName="HomeCategoryName" />
+                <ScalarProperty Name="HomeImage" ColumnName="HomeImage" />
+                <ScalarProperty Name="HomeFirsTitle" ColumnName="HomeFirsTitle" />
+                <ScalarProperty Name="HomeLastTitle" ColumnName="HomeLastTitle" />
+                <ScalarProperty Name="HomeButtonTitle" ColumnName="HomeButtonTitle" />
+                <ScalarProperty Name="HomeStundentImg" ColumnName="HomeStundentImg" />
+                <ScalarProperty Name="HomeNumberOfStudents" ColumnName="HomeNumberOfStudents" />
+                <ScalarProperty Name="HomeCourseImg" ColumnName="HomeCourseImg" />
+                <ScalarProperty Name="HomeNumberOfCourses" ColumnName="HomeNumberOfCourses" />
+                <ScalarProperty Name="HomeTeacherImg" ColumnName="HomeTeacherImg" />
+                <ScalarProperty Name="HomeNumberOfTeachers" ColumnName="HomeNumberOfTeachers" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Teacher">
+            <EntityTypeMapping TypeName="MuratErenNarDatabaseModel.Teacher">
+              <MappingFragment StoreEntitySet="Teacher">
+                <ScalarProperty Name="TeacherProfession" ColumnName="TeacherProfession" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TeacherCategoryName" ColumnName="TeacherCategoryName" />
+                <ScalarProperty Name="TeacherFirstTitle" ColumnName="TeacherFirstTitle" />
+                <ScalarProperty Name="TeacherLastTitle" ColumnName="TeacherLastTitle" />
+                <ScalarProperty Name="TeacherImage" ColumnName="TeacherImage" />
+                <ScalarProperty Name="TeacherFullName" ColumnName="TeacherFullName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WebVideoCourses">
+            <EntityTypeMapping TypeName="MuratErenNarDatabaseModel.WebVideoCourses">
+              <MappingFragment StoreEntitySet="WebVideoCourses">
+                <ScalarProperty Name="VideoCoursePath" ColumnName="VideoCoursePath" />
+                <ScalarProperty Name="VideoCourseLastTitle" ColumnName="VideoCourseLastTitle" />
+                <ScalarProperty Name="VideoCourseFirstTitle" ColumnName="VideoCourseFirstTitle" />
+                <ScalarProperty Name="VideoCourseId" ColumnName="VideoCourseId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BackendVideoCourse">
+            <EntityTypeMapping TypeName="MuratErenNarDatabaseModel.BackendVideoCourse">
+              <MappingFragment StoreEntitySet="BackendVideoCourse">
+                <ScalarProperty Name="CoursePath" ColumnName="CoursePath" />
+                <ScalarProperty Name="CourseTitle" ColumnName="CourseTitle" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SMManagement">
+            <EntityTypeMapping TypeName="MuratErenNarDatabaseModel.SMManagement">
+              <MappingFragment StoreEntitySet="SMManagement">
+                <ScalarProperty Name="CoursePath" ColumnName="CoursePath" />
+                <ScalarProperty Name="CourseTitle" ColumnName="CourseTitle" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ChemistryAndBiology">
+            <EntityTypeMapping TypeName="MuratErenNarDatabaseModel.ChemistryAndBiology">
+              <MappingFragment StoreEntitySet="ChemistryAndBiology">
+                <ScalarProperty Name="CoursePath" ColumnName="CoursePath" />
+                <ScalarProperty Name="CourseTitle" ColumnName="CourseTitle" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GraphicDesingCourse">
+            <EntityTypeMapping TypeName="MuratErenNarDatabaseModel.GraphicDesingCourse">
+              <MappingFragment StoreEntitySet="GraphicDesingCourse">
+                <ScalarProperty Name="CoursePath" ColumnName="CoursePath" />
+                <ScalarProperty Name="CourseTitle" ColumnName="CourseTitle" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EnglishCourse">
+            <EntityTypeMapping TypeName="MuratErenNarDatabaseModel.EnglishCourse">
+              <MappingFragment StoreEntitySet="EnglishCourse">
+                <ScalarProperty Name="CoursePath" ColumnName="CoursePath" />
+                <ScalarProperty Name="CourseTitle" ColumnName="CourseTitle" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="MuratErenNarDatabaseModel.Users">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="Role" ColumnName="Role" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

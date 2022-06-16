@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Öğrenmeye Başla</title>
+
+    <!--İcon-->
+    <link rel="icon" type="image/x-icon" href="~/Content/Core/images/favicon-32x32.png" />
+
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="~/Content/Core/css/style.css">
+    <link rel="stylesheet" href="~/Content/Core/css/dropdownStyle.css">
+    <link rel="stylesheet" href="~/Content/Core/css/CourseStyle.css">
+    <link rel="stylesheet" href="~/Content/Core/css/videoStyle.css">
+    <link rel="stylesheet" href="~/Content/Core/css/TeachersStyle.css">
+
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="navbar">
+            <ul>
+
+                <li>
+                    <a href="/Home" class="a_parent">
+                        <div class="wrap">
+                            <span class="icon">
+                                <i class="fa-solid fa-house"></i>
+                            </span>
+                            <span class="text">Ana Sayfa</span>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/Home/Courses" class="a_parent">
+                        <div class="wrap">
+                            <span class="icon">
+                                <i class="fa-solid fa-circle-play"></i>
+                            </span>
+                            <span class="text">Kurslar</span>
+                        </div>
+                    </a>
+                    <div class="dd_menu">
+                        <ul>
+                            <li>
+                                <a href="/Course/WebDeveloper" class="dd_menu_a">
+                                    <div class="wrap">
+                                        <span class="text"> Web Geliştirme </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Course/BackendDeveloper" class="dd_menu_a">
+                                    <div class="wrap">
+                                        <span class="text">Backend Geliştirme</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Course/SocialMediaManagement" class="dd_menu_a">
+                                    <div class="wrap">
+                                        <span class="text">Sosyal Medya Yönetimi</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <hr />
+                            <li>
+                                <a href="/Home/Courses" class="dd_menu_a">
+                                    <div class="wrap">
+                                        <span class="text">Daha Fazla ...</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="/Home/Teachers" class="a_parent">
+                        <div class="wrap">
+                            <span class="icon">
+                                <i class="fa-solid fa-users"></i>
+                            </span>
+                            <span class="text">Öğretmenler</span>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/Home/About" class="a_parent">
+                        <div class="wrap">
+                            <span class="icon">
+                                <i class="fa-solid fa-info"></i>
+                            </span>
+                            <span class="text">Hakkımızda</span>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/Home/Contact" class="a_parent">
+                        <div class="wrap">
+                            <span class="icon">
+                                <i class="fa-solid fa-globe"></i>
+                            </span>
+                            <span class="text">İletişim</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- header section ends -->
+    @RenderBody()
+    <!-- footer section starts  -->
+
+    <footer class="footer">
+
+        <section>
+
+            <div class="share">
+                <a href="https://www.linkedin.com/in/muraterennar" class="fab fa-linkedin"></a>
+                <a href="https://github.com/muraterennar" class="fab fa-github"></a>
+            </div>
+
+            <div class="credit">&copy; copyright 2022 by <span>Murat Eren Nar</span> | all rights reserved!</div>
+
+        </section>
+
+    </footer>
+
+    <!-- footer section ends -->
+
+
+    <script>
+        var a_parent = document.querySelectorAll(".a_parent");
+        var dd_menu_a = document.querySelectorAll(".dd_menu_a");
+
+        a_parent.forEach(function (aitem) {
+            aitem.addEventListener("mouseenter", function () {
+                a_parent.forEach(function (aitem) {
+                    aitem.classList.remove("active");
+                });
+                dd_menu_a.forEach(function (dd_menu_item) {
+                    dd_menu_item.classList.remove("active");
+                });
+
+                aitem.classList.add("active");
+            });
+        });
+
+        dd_menu_a.forEach(function (dd_menu_item) {
+            dd_menu_item.addEventListener("mouseenter", function () {
+                dd_menu_a.forEach(function (dd_menu_item) {
+                    dd_menu_item.classList.remove("active");
+                });
+                dd_menu_item.classList.add("active");
+            });
+        });
+
+
+        let listVideo = document.querySelectorAll(".video-list .vid");
+        let mainVideo = document.querySelector(".main-video video");
+        let title = document.querySelector(".main-video .title");
+
+        listVideo.forEach((video) => {
+            video.onclick = () => {
+                listVideo.forEach((vid) => vid.classList.remove("active"));
+                video.classList.add("active");
+                if (video.classList.contains('active')) {
+                    let src = video.children[0].getAttribute('src');
+                    mainVideo.src = src;
+
+                    let text = video.children[1].innerHTML;
+                    title.innerHTML = text;
+                };
+            };
+        });
+    </script>
+
+
+</body>
+</html>
