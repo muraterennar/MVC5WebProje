@@ -1,40 +1,83 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Paneli</title>
+    <link rel="icon" href="~/Content/Core/images/about-img.svg" />
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="~/Areas/Admin/Core/style.css" />
+
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet"
+          href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+
+    <!--<title>Admin Dashboard Panel</title>-->
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <i class="uil uil-atom"></i>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                </ul>
-            </div>
+
+            <span class="logo_name">Tech</span>
         </div>
-    </div>
 
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li>
+                    <a href="/Admin/Panel/Index">
+                        <i class="uil uil-estate"></i>
+                        <span class="link-name">Ana Sayfa</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/Admin/Teacher/Index">
+                        <i class="uil uil-book-reader"></i>
+                        <span class="link-name">Öğretmenler</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="uil uil-archive"></i>
+                        <span class="link-name">Kurslar</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="uil uil-users-alt"></i>
+                        <span class="link-name">Öğrenciler</span>
+                    </a>
+                </li>
+            </ul>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+            <ul class="logout-mode">
+                <li>
+                    <a href="/Admin/Login/Logout">
+                        <i class="uil uil-signout"></i>
+                        <span class="link-name">Logout</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <a href="#">
+                        <i class="uil uil-moon"></i>
+                        <span class="link-name">Dark Mode</span>
+                    </a>
+
+                    <div class="mode-toggle">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    @RenderBody()
+
+    <script src="~/Areas/Admin/Core/script.js"></script>
 </body>
 </html>

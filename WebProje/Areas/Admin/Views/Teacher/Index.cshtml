@@ -1,0 +1,65 @@
+﻿@model List<WebProje.Models.Teacher>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@if (TempData["TeacherUpdate"] != null)
+{
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        swal("Başarılı", "Güncelleme Gerçekleşti", "Success");
+    </script>
+}
+
+<section class="dashboard">
+
+    <div class="top">
+        <i class="uil uil-bars sidebar-toggle"></i>
+    </div>
+
+    <div class="dash-content">
+        <div class="activity">
+            <div class="title">
+                <i class="uil uil-clock-three"></i>
+                <span class="text">Öğretmenler</span>
+            </div>
+
+            <div class="activity-data">
+
+                <div class="data names">
+                    <span class="data-title">Resim</span>
+                    @foreach (var teacher in Model)
+                    {
+                        <span class="data-list"><img width="50" class="admin-img figure-img" src="~/Content/Core/images/@teacher.TeacherImage" /></span>
+
+                    }
+
+
+                </div>
+
+                <div class="data names">
+                    <span class="data-title">İsim</span>
+                    @foreach (var teacher2 in Model)
+                    {
+                        <span class="data-list">@teacher2.TeacherFullName</span>
+                    }
+
+
+                </div>
+                <div class="data email">
+                    <span class="data-title">Branş</span>
+                    @foreach (var teacher3 in Model)
+                    {
+                        <span class="data-list">@teacher3.TeacherProfession</span>
+                    }
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
