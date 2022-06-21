@@ -11,16 +11,14 @@ namespace WebProje.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class Users
     {
         public int Id { get; set; }
-        [Required(ErrorMessage ="Kullanýcý Adýný Giriniz. 'admin@admin.com'")]
         public string UserName { get; set; }
-        [Required(ErrorMessage ="Þifre Giriniz. '123456'")]
         public string Password { get; set; }
         public bool Role { get; set; }
-        public bool Rememberme { get; set; }
+
+        public virtual bool Rememberme { get; set; }
     }
 }

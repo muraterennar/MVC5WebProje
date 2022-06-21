@@ -9,26 +9,26 @@ namespace WebProje.App_Code
 {
     public class Seo
     {
-        public static string FolderNameEdit(string folderName)
+        public static string DosyaAdiDuzenle(string dosyaAdi)
         {
-            string NoUrlFolderName = Path.GetFileNameWithoutExtension(folderName);
-            string url = Path.GetExtension(folderName);
-            return UrlEdit(NoUrlFolderName) + url;
+            string uzantisizDosyaAdi = Path.GetFileNameWithoutExtension(dosyaAdi);
+            string uzanti = Path.GetExtension(dosyaAdi);
+            return AdresDuzenle(uzantisizDosyaAdi) + uzanti;
         }
-
-        public static string UrlEdit(object a)
+        public static string AdresDuzenle(object a)
         {
             string s = a.ToString();
-            if (string.IsNullOrEmpty(s))
+
+            //s = oncul + id + "-" + s;
+            if (string.IsNullOrEmpty(s)) //string yok veya boş ise true döndürür
             {
                 return "";
             }
 
             if (s.Length > 80)
             {
-                s = s.Substring(0, 80);
+                s = s.Substring(0, 80); //string den belli karakter alır.
             }
-
             s = s.Replace("ş", "s"); //karakter değişimi için kullanılır
             s = s.Replace("Ş", "S");
             s = s.Replace("ğ", "g");

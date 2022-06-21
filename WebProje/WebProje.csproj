@@ -131,6 +131,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\CourseController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
     <Compile Include="Areas\Admin\Controllers\PanelController.cs" />
     <Compile Include="Areas\Admin\Controllers\TeacherController.cs" />
@@ -2083,6 +2084,7 @@
     <Content Include="Areas\Admin\Views\Panel\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Teacher\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Teacher\TeacherUpdate.cshtml" />
+    <Content Include="Areas\Admin\Views\Course\CourseForm.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

@@ -11,7 +11,9 @@ namespace WebProje.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+    using System.Web;
+
     public partial class Teacher
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -24,8 +26,15 @@ namespace WebProje.Models
         public string TeacherCategoryName { get; set; }
         public string TeacherFirstTitle { get; set; }
         public string TeacherLastTitle { get; set; }
+        public virtual HttpPostedFileBase imgFile { get; set; }
+        [Required]
+        [Display(Name = "Resimler")]
         public string TeacherImage { get; set; }
+        [Required]
+        [Display(Name = "Ad Soyad")]
         public string TeacherFullName { get; set; }
+        [Required]
+        [Display(Name = "Branþ")]
         public string TeacherProfession { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

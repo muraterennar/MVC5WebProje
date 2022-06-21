@@ -11,7 +11,9 @@ namespace WebProje.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+    using System.Web;
+
     public partial class Course
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -24,9 +26,14 @@ namespace WebProje.Models
         public string CourseCategoryName { get; set; }
         public string CourseFirstTitle { get; set; }
         public string CourseLastTitle { get; set; }
+        public virtual HttpPostedFileBase imgFile { get; set; }
+        [Required]
+        [Display(Name = "Resim")]
         public string CourseImage { get; set; }
         public string CourseText { get; set; }
         public string CourseButtonTitle { get; set; }
+        [Required]
+        [Display(Name = "Kurs Adý")]
         public string CourseName { get; set; }
         public string CourseLink { get; set; }
     

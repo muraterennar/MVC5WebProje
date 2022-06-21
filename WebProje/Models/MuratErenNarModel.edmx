@@ -134,9 +134,9 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="TeacherCategoryName" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="TeacherFirstTitle" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="TeacherLastTitle" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="TeacherCategoryName" Type="varchar" MaxLength="200" />
+          <Property Name="TeacherFirstTitle" Type="varchar" MaxLength="200" />
+          <Property Name="TeacherLastTitle" Type="varchar" MaxLength="200" />
           <Property Name="TeacherImage" Type="varchar" MaxLength="200" Nullable="false" />
           <Property Name="TeacherFullName" Type="varchar" MaxLength="1000" Nullable="false" />
           <Property Name="TeacherProfession" Type="varchar" MaxLength="150" />
@@ -375,9 +375,9 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="TeacherCategoryName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="TeacherFirstTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="TeacherLastTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TeacherCategoryName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="TeacherFirstTitle" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="TeacherLastTitle" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
           <Property Name="TeacherImage" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="TeacherFullName" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Category" Relationship="Self.FK_Category_Teacher" FromRole="Teacher" ToRole="Category" />
