@@ -7,7 +7,7 @@ using WebProje.Models;
 
 namespace WebProje.Controllers
 {
-    public class CourseController : Controller
+    public class CoursesController : Controller
     {
         // GET: Course
         public ActionResult WebDeveloper()

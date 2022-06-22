@@ -43,10 +43,10 @@ namespace WebProje.Areas.Admin.Controllers
 
         public ActionResult Kaydet(Teacher gelenTeacher)
         {
-            if (!ModelState.IsValid)
-            {
-                return HttpNotFound("Error");
-            }
+            //if (!ModelState.IsValid)
+            //{
+            //    return HttpNotFound("Error");
+            //}
 
             using (MuratErenNarDatabaseEntities db = new MuratErenNarDatabaseEntities())
             {

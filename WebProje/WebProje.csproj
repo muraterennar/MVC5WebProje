@@ -136,7 +136,7 @@
     <Compile Include="Areas\Admin\Controllers\PanelController.cs" />
     <Compile Include="Areas\Admin\Controllers\StudentController.cs" />
     <Compile Include="Areas\Admin\Controllers\TeacherController.cs" />
-    <Compile Include="Controllers\CourseController.cs" />
+    <Compile Include="Controllers\CoursesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -223,6 +223,7 @@
     <Content Include="Areas\Admin\Core\img\avatar5.png" />
     <Content Include="Areas\Admin\Core\img\boxed-bg.jpg" />
     <Content Include="Areas\Admin\Core\img\boxed-bg.png" />
+    <Content Include="Areas\Admin\Core\img\course.png" />
     <Content Include="Areas\Admin\Core\img\credit\american-express.png" />
     <Content Include="Areas\Admin\Core\img\credit\cirrus.png" />
     <Content Include="Areas\Admin\Core\img\credit\mastercard.png" />
@@ -232,15 +233,8 @@
     <Content Include="Areas\Admin\Core\img\credit\visa.png" />
     <Content Include="Areas\Admin\Core\img\default-150x150.png" />
     <Content Include="Areas\Admin\Core\img\icons.png" />
-    <Content Include="Areas\Admin\Core\img\photo1.png" />
-    <Content Include="Areas\Admin\Core\img\photo2.png" />
-    <Content Include="Areas\Admin\Core\img\photo3.jpg" />
-    <Content Include="Areas\Admin\Core\img\photo4.jpg" />
-    <Content Include="Areas\Admin\Core\img\prod-1.jpg" />
-    <Content Include="Areas\Admin\Core\img\prod-2.jpg" />
-    <Content Include="Areas\Admin\Core\img\prod-3.jpg" />
-    <Content Include="Areas\Admin\Core\img\prod-4.jpg" />
-    <Content Include="Areas\Admin\Core\img\prod-5.jpg" />
+    <Content Include="Areas\Admin\Core\img\students.png" />
+    <Content Include="Areas\Admin\Core\img\teacher.png" />
     <Content Include="Areas\Admin\Core\img\user1-128x128.jpg" />
     <Content Include="Areas\Admin\Core\img\user2-160x160.jpg" />
     <Content Include="Areas\Admin\Core\img\user3-128x128.jpg" />
@@ -2117,12 +2111,12 @@
     <Content Include="Views\Home\Home.cshtml" />
     <Content Include="Views\Home\Reviews.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Course\WebDeveloper.cshtml" />
-    <Content Include="Views\Course\BackendDeveloper.cshtml" />
-    <Content Include="Views\Course\SocialMediaManagement.cshtml" />
-    <Content Include="Views\Course\ChemistryAndBiology.cshtml" />
-    <Content Include="Views\Course\GraphicDesing.cshtml" />
-    <Content Include="Views\Course\English.cshtml" />
+    <Content Include="Views\Courses\WebDeveloper.cshtml" />
+    <Content Include="Views\Courses\BackendDeveloper.cshtml" />
+    <Content Include="Views\Courses\SocialMediaManagement.cshtml" />
+    <Content Include="Views\Courses\ChemistryAndBiology.cshtml" />
+    <Content Include="Views\Courses\GraphicDesing.cshtml" />
+    <Content Include="Views\Courses\English.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

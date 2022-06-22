@@ -22,7 +22,18 @@
   height: 100%;
 }
 
-.navbar .a_parent:hover{
+.navbar a_parent_login {
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background-color: var(--light-bg);
+    cursor: pointer;
+    color: var(--white);
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+}
+
+.navbar .a_parent:hover {
     color: var(--green);
     background: var(--green);
 }

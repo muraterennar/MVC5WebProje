@@ -44,8 +44,8 @@
                                         <thead>
                                             <tr>
                                                 <th>Resim</th>
-                                                <th>Ad Soyad</th>
-                                                <th>Barnş</th>
+                                                <th>Kurs Adı</th>
+                                                <th>Kurs Açıklaması</th>
                                                 <th>Güncelle</th>
                                                 <th>Sil</th>
                                             </tr>
@@ -86,31 +86,7 @@
                                                     </td>
                                                     <td>@Html.ActionLink("Güncelle", "Guncelle", new { course.Id }, new { @class = "btn btn-info mx-4" })</td>
                                                     <td>
-                                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#sil_@course.Id">
-                                                            Sil
-                                                        </button>
-                                                        <div class="modal fade" id="sil_@course.Id">
-                                                            <div class="modal-dialog">
-                                                                <div class="modal-content">
-                                                                    <div class="modal-header">
-                                                                        <h4 class="modal-title">Sil</h4>
-                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                            <span aria-hidden="true">&times;</span>
-                                                                        </button>
-                                                                    </div>
-                                                                    <div class="modal-body">
-                                                                        <h4>Ürünü silmek istiyormusunuz</h4>
-                                                                    </div>
-                                                                    <div class="modal-footer justify-content-between">
-                                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Vazgeç</button>
-                                                                        @Html.ActionLink("Sil", "Sil", new { course.Id }, new { @class = "btn btn-danger" })
-                                                                    </div>
-                                                                </div>
-                                                                <!-- /.modal-content -->
-                                                            </div>
-                                                            <!-- /.modal-dialog -->
-                                                        </div>
-                                                        <!-- /.modal -->
+                                                        @Html.ActionLink("Sil", "Sil", new { course.Id }, new { @class = "btn btn-danger" })
                                                     </td>
                                                 </tr>
                                             }

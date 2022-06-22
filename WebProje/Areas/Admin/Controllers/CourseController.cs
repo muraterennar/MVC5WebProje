@@ -42,10 +42,10 @@ namespace WebProje.Areas.Admin.Controllers
 
         public ActionResult Kaydet(Course gelenCourse)
         {
-            if (!ModelState.IsValid)
-            {
-                return HttpNotFound("Error");
-            }
+            //if (!ModelState.IsValid)
+            //{
+            //    return HttpNotFound("Error");
+            //}
 
             using (MuratErenNarDatabaseEntities db = new MuratErenNarDatabaseEntities())
             {
@@ -54,7 +54,7 @@ namespace WebProje.Areas.Admin.Controllers
                     if (gelenCourse.imgFile == null)
                     {
                         ViewBag.HataFoto = "Lütfen Resim Yükleyin";
-                        return View("TeacherUpdate", gelenCourse);
+                        return View("CourseForm", gelenCourse);
                     }
 
                     string fotoAdi = Seo.DosyaAdiDuzenle(gelenCourse.imgFile.FileName);
@@ -62,7 +62,7 @@ namespace WebProje.Areas.Admin.Controllers
                     db.Course.Add(gelenCourse);
                     gelenCourse.imgFile.SaveAs(Path.Combine(Server.MapPath("~/Content/Core/images"), Path.GetFileName(fotoAdi)));
 
-                    TempData["teacher"] = "Öğretmen Başarılı Bir Şekilde Eklendi";
+                    TempData["Course"] = "Kurs Başarılı Bir Şekilde Eklendi";
                 }
                 else                             //güncelleme                          
                 {
@@ -75,7 +75,7 @@ namespace WebProje.Areas.Admin.Controllers
                     }
                     db.Entry(guncellenecekVeri).CurrentValues.SetValues(gelenCourse);
 
-                    TempData["teacher"] = "Öğretmen Başarılı Bir Şekilde Eklendi";
+                    TempData["Course"] = "Kurs Başarılı Bir Şekilde Eklendi";
                 }
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -89,12 +89,12 @@ namespace WebProje.Areas.Admin.Controllers
                 var silinecekCourse = db.Course.Find(id);
                 if (silinecekCourse == null)
                 {
-                    return HttpNotFound("Öğretmen Bulunamadı");
+                    return HttpNotFound("Öğrenci Bulunamadı");
                 }
 
                 db.Course.Remove(silinecekCourse);
                 db.SaveChanges();
-                TempData["teacher"] = "Öğretmen basarli bir sekilde silindi";
+                TempData["Course"] = "Öğrenci basarli bir sekilde silindi";
                 return RedirectToAction("Index");
             }
         }

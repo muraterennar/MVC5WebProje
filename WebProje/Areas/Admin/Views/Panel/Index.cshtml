@@ -4,32 +4,39 @@
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
-<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-            <h1 class="h2">Rentals</h1>
+<main class="col-md-9 ms-auto col-lg-10 px-md-4">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 g-4 mt-5">
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="~/Areas/Admin/Core/img/course.png" class="card-img-top img-circle w-50 h-50 mx-auto" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Kurslar</h5>
+                        <p class="card-text">Kurs Ekleme Silme İşlemleri</p>
+                        <a href="/Admin/Course/Index" class="btn btn-primary">Git</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="~/Areas/Admin/Core/img/students.png" class="card-img-top w-50 h-50 mx-auto" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Öğretmenler</h5>
+                        <p class="card-text">Öğretmen Ekleme Silme İşlemleri</p>
+                        <a href="/Admin/Teacher" class="btn btn-primary">Git</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="~/Areas/Admin/Core/img/teacher.png" class="card-img-top w-50 h-50 mx-auto" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Öğrenci</h5>
+                        <p class="card-text">Öğrenci Ekleme Silme İşlemleri</p>
+                        <a href="/Admin/Student/Index" class="btn btn-primary">Git</a>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <h2>Section title</h2>
-        <div class="table-responsive">
-            <table class="table table-striped table-sm">
-                <thead>
-                    <tr>
-                        <th scope="col">Id</th>
-                        <th scope="col">User Name</th>
-                        <th scope="col">Customer Name</th>
-                        <th scope="col">Rent Date</th>
-                        <th scope="col">Return Date</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1,001</td>
-                        <td>random</td>
-                        <td>data</td>
-                        <td>placeholder</td>
-                        <td>text</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+    </div>
     </main>
