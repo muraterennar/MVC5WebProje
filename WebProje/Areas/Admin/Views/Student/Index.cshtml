@@ -1,0 +1,115 @@
+﻿@model List<WebProje.Models.Users>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@if (TempData["Course"] != null)
+{
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script>
+    swal("Başarılı","@Html.Raw(TempData["Course"])","success");
+    </script>
+}
+
+<main class="col-md-9 bg-gradient-dark ms-sm-auto col-lg-10 px-md-4">
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Öğretmenler</h1>
+    </div>
+    <div class="table-responsive">
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="/Admin/index">Ana Sayfa</a></li>
+                        <li class="breadcrumb-item active">DataTables</li>
+                    </ol>
+                </div>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="row">
+                        <div class="col-12">
+
+                            <!-- /.card -->
+                            <div class="card">
+                                <div class="card-header">
+                                    @Html.ActionLink("Öğrenci Ekle", "Yeni", null, new { @class = "btn btn-primary mx-4" })
+                                </div>
+                                <!-- /.card-header -->
+                                <div class="card-body">
+                                    <table id="example1" class="table table-bordered table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Öğrenci Adı</th>
+                                                <th>Öğrenci Şifre</th>
+                                                <th>Güncelle</th>
+                                                <th>Sil</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var student in Model)
+                                            {
+                                                <tr>
+                                                    <td>@student.UserName</td>
+                                                    <td>@student.Password</td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal_@student.Id">
+                                                            İçerik
+                                                        </button>
+                                                        <div class="modal fade" id="modal_@student.Id">
+                                                            <div class="modal-dialog">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h4 class="modal-title">İçerik</h4>
+                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                            <span aria-hidden="true">&times;</span>
+                                                                        </button>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        @Html.Raw(student.UserName)
+                                                                    </div>
+                                                                    <div class="modal-footer justify-content-between">
+                                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+
+                                                                    </div>
+                                                                </div>
+                                                                <!-- /.modal-content -->
+                                                            </div>
+                                                            <!-- /.modal-dialog -->
+                                                        </div>
+                                                        <!-- /.modal -->
+                                                    </td>
+                                                    <td>@Html.ActionLink("Güncelle", "Guncelle", new { student.Id }, new { @class = "btn btn-info mx-4" })</td>
+                                                    <td>
+                                                        @Html.ActionLink("Sil", "Sil", new { student.Id }, new { @class = "btn btn-danger" })
+
+                                                        <!-- /.modal -->
+                                                    </td>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+                            <!-- /.card -->
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+                    <!-- /.container-fluid -->
+                </section>
+                <!-- /.content -->
+
+            </div>
+        </div>
+    </div>
+</main>
+
+
+
+
+<!-- Content Wrapper. Contains page content -->

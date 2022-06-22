@@ -79,13 +79,13 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="CourseCategoryName" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="CourseFirstTitle" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="CourseLastTitle" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CourseCategoryName" Type="varchar" MaxLength="100" />
+          <Property Name="CourseFirstTitle" Type="varchar" MaxLength="100" />
+          <Property Name="CourseLastTitle" Type="varchar" MaxLength="100" />
           <Property Name="CourseImage" Type="varchar" MaxLength="200" Nullable="false" />
           <Property Name="CourseText" Type="varchar" MaxLength="1000" Nullable="false" />
-          <Property Name="CourseButtonTitle" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="CourseName" Type="varchar" MaxLength="100" />
+          <Property Name="CourseButtonTitle" Type="varchar" MaxLength="100" />
+          <Property Name="CourseName" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="CourseLink" Type="varchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="EnglishCourse">
@@ -342,13 +342,13 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="CourseCategoryName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="CourseFirstTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="CourseLastTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CourseCategoryName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CourseFirstTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CourseLastTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="CourseImage" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="CourseText" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="CourseButtonTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="CourseName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CourseButtonTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CourseName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Category" Relationship="Self.FK_Category_Course" FromRole="Course" ToRole="Category" />
           <Property Name="CourseLink" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
         </EntityType>

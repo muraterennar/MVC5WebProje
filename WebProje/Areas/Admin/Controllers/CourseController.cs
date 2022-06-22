@@ -21,11 +21,10 @@ namespace WebProje.Areas.Admin.Controllers
             }
         }
 
-        public ActionResult Yeni()
+        public ActionResult Yeni(Course gelenCourse)
         {
-            Course course = new Course();
-            return View("CourseForm", course);
-
+            var model = new Course();
+            return View("CourseForm",model);
         }
 
         public ActionResult Guncelle(int id)

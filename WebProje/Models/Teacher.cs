@@ -28,7 +28,7 @@ namespace WebProje.Models
         public string TeacherLastTitle { get; set; }
         public virtual HttpPostedFileBase imgFile { get; set; }
         [Required]
-        [Display(Name = "Resimler")]
+        [Display(Name ="Resim")]
         public string TeacherImage { get; set; }
         [Required]
         [Display(Name = "Ad Soyad")]

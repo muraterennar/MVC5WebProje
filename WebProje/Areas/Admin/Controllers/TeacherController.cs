@@ -23,7 +23,7 @@ namespace WebProje.Areas.Admin.Controllers
 
         public ActionResult Yeni()
         {
-            Models.Teacher teacher = new Models.Teacher();
+            var teacher = new Teacher();
             return View("TeacherUpdate", teacher);
 
         }

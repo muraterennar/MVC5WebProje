@@ -1,8 +1,64 @@
-﻿
+﻿@model WebProje.Models.Course
+
 @{
     ViewBag.Title = "CourseForm";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
-<h2>CourseForm</h2>
+<style>
+    .field-validation-error {
+        color: red;
+    }
+</style>
+
+<div class="content-wrapper">
+    <div class="container">
+        @using (Html.BeginForm("Kaydet", "Course", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+        {
+            <table class="table table-hover bg-white">
+                <tr>
+                    <td>Resim</td>
+                    <td>
+                        @if (Model.CourseImage != null)
+                        {
+                            <img src="~/Content/images/@Model.CourseImage" width="250" />
+                        }
+                        @Html.TextBoxFor(m => m.imgFile, new { type = "file" })
+                        @if (ViewBag.HataFoto != null)
+                        {
+                            <span class="field-validation-error" data-valmsg-for="fotoFile" data-valmsg-replace="true">@ViewBag.HataFoto</span>
+                        }
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ad Soyad</td>
+                    <td>
+                        @Html.TextAreaFor(m => m.CourseName, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.CourseName)
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Ad Soyad</td>
+                    <td>
+                        @Html.TextAreaFor(m => m.CourseText, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.CourseText)
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        @Html.HiddenFor(m => m.CourseImage)
+                        @Html.HiddenFor(m => m.Id)
+                        <input type="submit" value="Kaydet" class="btn btn-primary" />
+                    </td>
+                </tr>
+
+            </table>
+        }
+
+    </div>
+
+</div>
+
 

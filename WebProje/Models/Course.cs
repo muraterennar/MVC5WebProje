@@ -30,6 +30,8 @@ namespace WebProje.Models
         [Required]
         [Display(Name = "Resim")]
         public string CourseImage { get; set; }
+        [Required]
+        [Display(Name = "Kurs Açýklmam")]
         public string CourseText { get; set; }
         public string CourseButtonTitle { get; set; }
         [Required]
